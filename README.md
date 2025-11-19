@@ -2,7 +2,7 @@
 
 **Intelli Excel** is an AI-powered tool that generates complex Excel formulas from simple natural language descriptions. Just describe what you want to calculate, and let the AI do the heavy lifting!
 
-![Intelli Excel Demo](public/placeholder.svg)
+
 
 ## ✨ Features
 
