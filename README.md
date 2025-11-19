@@ -1,73 +1,102 @@
-# Welcome to your Lovable project
+# Intelli Excel 🚀
 
-## Project info
+**Intelli Excel** is an AI-powered tool that generates complex Excel formulas from simple natural language descriptions. Just describe what you want to calculate, and let the AI do the heavy lifting!
 
-**URL**: https://lovable.dev/projects/fed2a6b1-c1c6-49da-8d18-8563307e9a4d
+![Intelli Excel Demo](public/placeholder.svg)
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+*   **Natural Language to Formula**: Convert plain English into valid Excel formulas.
+*   **AI-Powered**: Built with Google's Gemini 1.5 Flash model for high accuracy.
+*   **Instant Copy**: One-click button to copy the generated formula to your clipboard.
+*   **Smart Validation**: Rejects non-Excel related queries with a friendly notice.
+*   **Modern UI**: Clean, responsive interface built with React and Tailwind CSS.
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/fed2a6b1-c1c6-49da-8d18-8563307e9a4d) and start prompting.
+*   **Frontend**: React, TypeScript, Vite, Tailwind CSS, shadcn/ui
+*   **Backend**: Python, Flask
+*   **AI Model**: Google Gemini API (gemini-pro-latest)
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Getting Started
 
-**Use your preferred IDE**
+Follow these instructions to get the project running on your local machine.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+*   Node.js & npm installed
+*   Python 3.8+ installed
+*   A Google Cloud Project with Gemini API access (API Key)
 
-Follow these steps:
+### 1. Clone the Repository
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+git clone https://github.com/arpi081/intelliexcel-.git
+cd intelliexcel-
 ```
 
-**Edit a file directly in GitHub**
+### 2. Backend Setup
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Navigate to the backend directory and set up the Python environment.
 
-**Use GitHub Codespaces**
+```bash
+cd backend
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+**Install Dependencies:**
 
-## What technologies are used for this project?
+```bash
+pip install -r requirements.txt
+```
 
-This project is built with:
+**Configure API Key:**
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1.  Create a `.env` file in the `backend` folder.
+2.  Add your Gemini API key:
 
-## How can I deploy this project?
+```env
+GEMINI_API_KEY=your_actual_api_key_here
+```
 
-Simply open [Lovable](https://lovable.dev/projects/fed2a6b1-c1c6-49da-8d18-8563307e9a4d) and click on Share -> Publish.
+**Start the Server:**
 
-## Can I connect a custom domain to my Lovable project?
+```bash
+python app.py
+```
+The backend will run on `http://localhost:5000`.
 
-Yes, you can!
+### 3. Frontend Setup
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Open a new terminal window and navigate to the project root (if you are in backend, go back one level).
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```bash
+cd ..
+```
+
+**Install Dependencies:**
+
+```bash
+npm install
+```
+
+**Start the Development Server:**
+
+```bash
+npm run dev
+```
+The frontend will run on `http://localhost:8080` (or similar).
+
+## 📝 Usage
+
+1.  Open the frontend URL in your browser.
+2.  In the text box, describe your Excel problem (e.g., *"Calculate the average of column B if column A is 'Sales'"*).
+3.  Click **Generate Formula**.
+4.  Copy the result and paste it into Excel!
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
